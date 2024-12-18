@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: cortex-tensor
+Version: 0.0.1
+Summary: A Deep learning library with CPU and GPU support
+Author-email: Shashwat Pandey <shashwatpandeym.v@gmail.com>
+License: MIT
+Project-URL: Homepage, https://github.com/Shashwatpandey4/cortex
+Project-URL: Repository, https://github.com/Shashwatpandey4/cortex.git
+Keywords: autograd,tensor,deep-learning,machine-learning,neural-networks
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+Requires-Dist: numpy>=2.2.0
+Requires-Dist: cupy-cuda12x>=13.3.0; platform_system == "Linux"

@@ -1,0 +1,34 @@
+[build-system]
+requires = ["setuptools>=45", "wheel", "setuptools_scm>=6.2"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cortex-tensor" 
+version = "0.0.1"
+authors = [
+    {name = "Shashwat Pandey", email = "shashwatpandeym.v@gmail.com"},
+]
+description = "A Deep learning library with CPU and GPU support"
+readme = "README.md"
+requires-python = ">=3.9"
+keywords = ["autograd", "tensor", "deep-learning", "machine-learning", "neural-networks"]
+license = {text = "MIT"}
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+dependencies = [
+    "numpy>=2.2.0",
+    "cupy-cuda12x>=13.3.0; platform_system=='Linux'",
+]
+
+[project.urls]
+Homepage = "https://github.com/Shashwatpandey4/cortex"
+Repository = "https://github.com/Shashwatpandey4/cortex.git"
