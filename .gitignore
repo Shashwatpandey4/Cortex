@@ -1,1 +1,29 @@
-/venv
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Distribution / packaging
+dist/
+build/
+*.egg-info/
+*.egg
+develop-eggs/
+.eggs/
+wheels/
+sdist/
+
+# Documentation
+docs/_build/
+docs/build/
+_docs_html/
+
+# Virtual environments
+venv/
+env/
+ENV/
+.env
+.venv
+
+#
