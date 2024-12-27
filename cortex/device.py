@@ -1,8 +1,22 @@
 from typing import TYPE_CHECKING, Any, Tuple, Union
 
-import cupy as cp
 import numpy as np
 
+try:
+    import cupy as cp
+
+    CUDA_AVAILABLE = True
+except ImportError:
+    import numpy as cp
+
+    CUDA_AVAILABLE = False
+    import warnings
+
+    warnings.warn(
+        "CUDA/CuPy not available. Using CPU-only mode. "
+        "To use GPU acceleration, please install CuPy: "
+        "pip install cupy-cuda11x (replace with your CUDA version)"
+    )
 if TYPE_CHECKING:
     from .tensor import Tensor
 
