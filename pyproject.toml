@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "cortex-tensor" 
-version = "0.0.1"
+version = "0.0.0"
 authors = [
     {name = "Shashwat Pandey", email = "shashwatpandeym.v@gmail.com"},
 ]
@@ -25,8 +25,12 @@ classifiers = [
     "Topic :: Scientific/Engineering :: Artificial Intelligence",
 ]
 dependencies = [
-    "numpy>=2.2.0",
-    "cupy-cuda12x>=13.3.0; platform_system=='Linux'",
+    "numpy>=1.21.0"
+]
+
+[project.optional-dependencies]
+gpu = [
+    "cupy-cuda11x>=11.0.0"
 ]
 
 [project.urls]
