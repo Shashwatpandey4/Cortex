@@ -109,16 +109,6 @@ class TensorOperations:
             other.data**self.tensor.data, [other, self.tensor], "**"
         )
 
-    # Neural Network Operations
-    def relu(self):
-        xp = self.device_manager._get_array_module()
-        output = xp.maximum(0, self.tensor.data)
-        return self._create_tensor(output, [self.tensor], "relu")
-
-    def tanh(self):
-        xp = self.device_manager._get_array_module()
-        return self._create_tensor(xp.tanh(self.tensor.data), [self.tensor], "tanh")
-
     # Tensor Operations
     def sum(self):
         xp = self.device_manager._get_array_module()
