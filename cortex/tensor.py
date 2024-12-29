@@ -2,6 +2,7 @@ import numpy as np
 
 from .autograd import AutogradContext
 from .device import DeviceManager
+from .nn.functional.activation import ActivationFunctions
 from .operations import TensorOperations
 
 
@@ -30,6 +31,7 @@ class Tensor:
 
         self.ops = TensorOperations(self)
         self.autograd = AutogradContext(self)
+        self.activation = ActivationFunctions(self)
 
     def __repr__(self):
         return f"Tensor(\n{self.data})"
@@ -65,12 +67,24 @@ class Tensor:
     def __rpow__(self, other):
         return self.ops.rpower(other)
 
-    # Neural network operations
+    # Activation Functions
     def relu(self):
-        return self.ops.relu()
+        return self.activation.relu()
+
+    def leaky_relu(self, negative_slope: float = 0.01):
+        return self.activation.leaky_relu(negative_slope)
+
+    def gelu(self):
+        return self.activation.gelu()
 
     def tanh(self):
-        return self.ops.tanh()
+        return self.activation.tanh()
+
+    def sigmoid(self):
+        return self.activation.sigmoid()
+
+    def softmax(self, dim=None):
+        return self.activation.softmax(dim)
 
     # Tensor operations
     def sum(self):
